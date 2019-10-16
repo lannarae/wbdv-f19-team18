@@ -24,4 +24,5 @@ By designing a food reviewing service around specific dishes, customers can more
 Customers can also have their own profile where they can add their dietary restrictions and preferences, which can help with filtering the search results and reviews.
 
 <b>Web API:</b>
-One of the main requirements is to work with data available from some public, free, Web API. Provide a brief description of the Web API you intend to use
+SinglePlatform is "the world's leading provider of menus" and has a free API that enables publishers to implement hundreds of thousands of restaurant menus spanning over 13,000 cities. This API has a vast amount of detailed information including price, delivery options, and dietary restrictions. Access to dietary restrictions get as detailed as including attributes to query if a menu object is organic, contains shellfish, soy, tree nuts, and more. 
+http://docs.singleplatform.com/spv3/publisher_api/
