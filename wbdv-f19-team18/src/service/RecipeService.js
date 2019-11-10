@@ -3,16 +3,17 @@ import React from "react";
 const key = "d36e2f36f3e44818967b12d4bdb6d7ac";
 
 export default class RecipeService {
-  static instance = null;
-  static getInstance = () => {
-    if (this.instance == null) {
-      this.instance = new RecipeService();
+    static myInstance = null;
+
+    static getInstance() {
+        if(RecipeService.myInstance == null) {
+            RecipeService.myInstance = new RecipeService()
+        }
+        return this.myInstance
     }
-    return this.instance;
-  };
 
   searchRecipeByName = name => {
-    fetch(
+    return fetch(
       `https://api.spoonacular.com/recipes/search?apiKey=${key}&query=${name}`,
       {
         method: "GET",
@@ -24,7 +25,7 @@ export default class RecipeService {
   };
 
   searchRecipeInfoById = id => {
-    fetch(
+    return fetch(
       `https://api.spoonacular.com/recipes/${id}/information?apiKey=${key}`,
       {
         method: "GET",
