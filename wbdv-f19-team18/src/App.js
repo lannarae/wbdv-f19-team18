@@ -1,14 +1,19 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
-import SearchPage from "./components/SearchPage";
+import SearchPageContainer from "./containers/SearchPageContainer";
+import {Provider} from "react-redux";
+import {createStore} from "redux";
+import SearchPageReducer from "./reducers/SearchPageReducer";
 
-function App() {
-  return (
-    <div className="container-fluid my-3">
-      <SearchPage/>
-    </div>
-  );
-}
+const App = () => {
+    const store = createStore(SearchPageReducer);
+    return (
+        <div className="container-fluid my-3">
+            <Provider store={store}>
+                <SearchPageContainer/>
+            </Provider>
+        </div>
+    );
+};
 
 export default App;
