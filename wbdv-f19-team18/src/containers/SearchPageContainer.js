@@ -5,7 +5,7 @@ import RecipeService from "../service/RecipeService";
 
 const stateToPropertyMapper = (state, ownProps) => {
     return {
-        recipes: [{ id: 1, name: "Curried Coconut Chicken" }]
+        recipes: state.recipes/*[{ id: 1, name: "Curried Coconut Chicken" }]*/
     };
 };
 

@@ -4,15 +4,26 @@ import service from "../service/RecipeService";
 
 let recipeService = service.getInstance();
 
-export default class SearchPage  extends React.Component {
+export default class SearchPage extends React.Component {
+
+    constructor(props) {
+        super(props)
+        this.state = {
+            searchName: ''
+        }
+    }
 
     componentDidMount() {
         console.log("Component Did Mount")
-
-        console.log(recipeService.searchRecipeByName("soup"))
+      /*  console.log(recipeService.searchRecipeByName("soup"))*/
     }
 
-    render(){
+    searchNameChanged = event =>
+        this.setState({
+            searchName: event.target.value
+        })
+
+    render() {
         return (
             <div>
                 <div className="input-group col-md-6">
@@ -20,15 +31,19 @@ export default class SearchPage  extends React.Component {
                         type="text"
                         className="form-control"
                         placeholder="Search for a recipe"
-                    />
+                        onChange={this.searchNameChanged}/>
                     <div className="input-group-append">
-                        <button className="btn btn-primary" type="button">
+                        <button className="btn btn-primary"
+                                type="button"
+                                onClick={() => {this.props.searchRecipeByName(this.state.searchName)}}>
                             Search
                         </button>
                     </div>
                 </div>
                 <SearchResultList
-                    recipes={[{ id: 1, name: "Curried Coconut Chicken" }]}
+                    /* recipes={[{ id: 1, name: "Curried Coconut Chicken" }]}*/
+                    recipes={this.props.recipes}
+
                 />
             </div>
         );
