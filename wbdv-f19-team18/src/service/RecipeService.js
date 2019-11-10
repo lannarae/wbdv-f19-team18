@@ -21,7 +21,8 @@ export default class RecipeService {
           "Content-Type": "application/json"
         }
       }
-    ).then(response => response.json());
+    ).then(response => response.json())
+        .then(responseObject => responseObject.results);
   };
 
   searchRecipeInfoById = id => {
