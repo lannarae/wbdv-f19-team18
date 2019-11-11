@@ -7,7 +7,7 @@ let recipeService = service.getInstance();
 export default class SearchPage extends React.Component {
 
     constructor(props) {
-        super(props)
+        super(props);
         this.state = {
             searchName: ''
         }
@@ -40,11 +40,7 @@ export default class SearchPage extends React.Component {
                         </button>
                     </div>
                 </div>
-                <SearchResultList
-                    /* recipes={[{ id: 1, name: "Curried Coconut Chicken" }]}*/
-                    recipes={this.props.recipes}
-
-                />
+                <SearchResultList recipes={this.props.recipes}/>
             </div>
         );
     }
