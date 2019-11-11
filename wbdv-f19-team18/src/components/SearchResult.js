@@ -5,6 +5,7 @@ const SearchResult = ({recipe}) => {
     return (
         <div className="row">
             <img className="g18-search-result-image rounded"
+                 alt=""
                  src={`https://spoonacular.com/recipeImages/${recipe.image}`}/>
             <div className="col-6 g18-search-result-text">
                 <b>{recipe.title}</b>

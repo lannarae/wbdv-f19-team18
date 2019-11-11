@@ -31,7 +31,7 @@ class DetailPage extends React.Component {
             <div>
                 <h1 className="text-center">{(recipe) ? recipe.title : "Recipe Title"}</h1>
                 <img className="my-5 mx-auto d-block"
-                     alt="Recipe Image"
+                     alt=""
                      src={recipe && recipe.image}/>
                 <div className="row">
                     <h5 className="col-4 text-center">Prep Time: {recipe && recipe.preparationMinutes}</h5>

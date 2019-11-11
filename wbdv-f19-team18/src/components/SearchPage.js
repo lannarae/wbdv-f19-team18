@@ -1,8 +1,5 @@
 import React from "react";
 import SearchResultList from "../components/SearchResultList";
-import service from "../service/RecipeService";
-
-let recipeService = service.getInstance();
 
 export default class SearchPage extends React.Component {
 
@@ -13,15 +10,10 @@ export default class SearchPage extends React.Component {
         }
     }
 
-    componentDidMount() {
-        console.log("Component Did Mount")
-      /*  console.log(recipeService.searchRecipeByName("soup"))*/
-    }
-
     searchNameChanged = event =>
         this.setState({
             searchName: event.target.value
-        })
+        });
 
     render() {
         return (

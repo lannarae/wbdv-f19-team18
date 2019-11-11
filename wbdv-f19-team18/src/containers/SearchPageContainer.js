@@ -1,4 +1,3 @@
-import React from 'react';
 import {connect} from 'react-redux';
 import SearchPage from "../components/SearchPage";
 import RecipeService from "../service/RecipeService";

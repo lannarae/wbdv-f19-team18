@@ -1,5 +1,3 @@
-import React from "react";
-
 const key = "d36e2f36f3e44818967b12d4bdb6d7ac";
 
 export default class RecipeService {
