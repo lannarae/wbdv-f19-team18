@@ -21,6 +21,15 @@ const dispatcherToPropertyMapper = (dispatch, ownProps) => {
                         recipes: recipes
                     });
                 });
+        },
+        searchRecipeById: id => {
+            service.searchRecipeInfoById(id)
+                .then(recipe => {
+                    dispatch({
+                        type: 'FIND_RECIPE',
+                        recipe: recipe
+                    });
+                });
         }
     };
 };
