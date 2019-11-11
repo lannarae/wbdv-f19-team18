@@ -34,7 +34,6 @@ export default class RecipeService {
           "Content-Type": "application/json"
         }
       }
-    ).then(response => response.json())
-        .then(responseObject => responseObject.results);
+    ).then(response => response.json());
   };
 }

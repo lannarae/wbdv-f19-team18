@@ -1,5 +1,6 @@
 import React from 'react';
 import SearchResult from "./SearchResult";
+import { Link } from "react-router-dom";
 
 const SearchResultList = ({recipes}) => {
     console.log(recipes)
@@ -9,10 +10,12 @@ const SearchResultList = ({recipes}) => {
                 {
                     recipes && recipes.map(recipe => {
                         return (
-                            <li key={recipe.id}
-                                className="list-group-item">
-                                <SearchResult recipe={recipe}/>
-                            </li>
+                            <Link to={`./recipe/${recipe.id}`}>
+                                <li key={recipe.id}
+                                    className="list-group-item">
+                                    <SearchResult recipe={recipe}/>
+                                </li>
+                            </Link>
                         );
                     })
                 }
